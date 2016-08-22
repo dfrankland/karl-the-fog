@@ -35,7 +35,7 @@
   },
   "name": "karl-the-fog",
   "description": "Creates a \"stylized fog\" using an HTML5 canvas.",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "directories": {
     "example": "example"
   },
