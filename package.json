@@ -1,0 +1,58 @@
+{
+  "main": "dist/node.js",
+  "files": [
+    "./dist/node.js",
+    "./dist/web.js"
+  ],
+  "scripts": {
+    "start": "babel-node tools/start",
+    "build": "babel-node tools/build",
+    "prepublish": "npm run build -- --release"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.13.0",
+    "babel-runtime": "^6.11.6",
+    "eases": "^1.0.8"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-modern-node": "^2.1.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "browser-sync": "^2.14.0",
+    "webpack": "^1.13.2"
+  },
+  "babel": {
+    "presets": [
+      "modern-node/6.0",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
+  },
+  "name": "karl-the-fog",
+  "description": "Creates a \"stylized fog\" using an HTML5 canvas.",
+  "version": "0.0.0",
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dfrankland/karl-the-fog.git"
+  },
+  "keywords": [
+    "karl",
+    "fog",
+    "canvas",
+    "animation"
+  ],
+  "author": "Dylan Frankland <dylan@frankland.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dfrankland/karl-the-fog/issues"
+  },
+  "homepage": "https://github.com/dfrankland/karl-the-fog#readme"
+}

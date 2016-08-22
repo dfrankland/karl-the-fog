@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Karl the Fog</title>
+    <style>
+      html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      body {
+        /*
+          Taken from Unsplash (https://unsplash.com/@jaspervandermeij?photo=D8qQgEqVDy0)
+          Photo by Jasper van der Meij (werkaandemuur.nl)
+        */
+        background-image: url('/golden-gate.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #fff;
+      }
+
+      #fog1, #fog2 {
+        position: absolute;
+        top: 0;
+        filter: blur(2px);
+        opacity: 0.3;
+      }
+
+      #fog1 {
+        left: 0;
+      }
+
+      #fog2 {
+        right: 0;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="fog1"></canvas>
+    <canvas id="fog2"></canvas>
+  </body>
+  <script src="dist/web.js"></script>
+  <script>
+    window.onload = () => {
+      new KarlTheFog({
+        canvas: document.getElementById('fog1'),
+        style: {
+          color: '#fff',
+          scaleY: 35,
+          scaleX: 50,
+          width: 700,
+        },
+        steps: 100,
+        animate: true,
+        resize: true,
+        timingFunction: 'cubicInOut',
+      });
+      new KarlTheFog({
+        canvas: document.getElementById('fog2'),
+        style: {
+          color: '#fff',
+          scaleY: 35,
+          scaleX: 50,
+          width: 700,
+        },
+        steps: 100,
+        animate: true,
+        resize: true,
+        timingFunction: 'cubicInOut',
+      });
+    };
+  </script>
+</html>
