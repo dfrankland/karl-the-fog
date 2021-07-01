@@ -22,7 +22,7 @@
     "babel-preset-modern-node": "^2.1.1",
     "babel-preset-stage-0": "^6.5.0",
     "browser-sync": "^2.14.0",
-    "webpack": "^1.13.2"
+    "webpack": "^5.41.1"
   },
   "babel": {
     "presets": [
